@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- main-activity-->
+    <style name="linearlayoutbig">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="linearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="textcalc">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:lines">2</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:layout_above">@id/result_txt</item>
+    </style>
+
+    <style name="textresult">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_above">@id/buttons_layout</item>
+    </style>
+
+    <style name="buttonNumber">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">68dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/circle_btn_light_grey</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:onClick">numberAction</item>
+    </style>
+
+    <style name="buttonOperator">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">68dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/circle_btn_light_blue</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:onClick">operationAction</item>
+    </style>
+
+    <style name="buttonclearall">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">68dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/circle_btn_light_blue</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_margin">12dp</item>
+    </style>
+
+    <style name="buttonEqual">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">68dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/circle_btn_green</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">12dp</item>
+    </style>
+
+    <style name="buttonBackspace">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">68dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/circle_btn_light_blue</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:src">@drawable/backspace_outline</item>
+    </style>
+
+    <style name="buttonExchangeCurrency">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">68dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/circle_btn_light_blue</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:src">@drawable/currencyexchangelight</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:onClick">exchangecurrencyAction</item>
+    </style>
+
+    <!-- exchange-currency-activity -->
+    <style name="return_btn">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:src">@drawable/arrow</item>
+        <item name="android:layout_above">@+id/infos</item>
+    </style>
+
+    <style name="infos">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_above">@+id/buttonsLayout</item>
+        <item name="android:layout_margin">40dp</item>
+    </style>
+
+    <style name="resultTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:text">Result</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="spinnerLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/resultTextView</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="myspinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:entries">@array/currency_array</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="convertButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/compare_horizontal</item>
+        <item name="android:background">@drawable/circle_btn_light_blue</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="convertedamount">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/spinnerLayout</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:hint">Enter amount</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="linearlayout2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="buttonsLayout2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="firstcol">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="number">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:background">@drawable/circle_btn_light_grey</item>
+        <item name="android:onClick">numberAction</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="dltall">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/square_shape</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+</resources>
