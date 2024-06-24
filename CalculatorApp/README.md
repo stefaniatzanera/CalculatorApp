@@ -6,7 +6,7 @@ Attention! => In order to do the conversion you need internet access, otherwise 
 
 # Screenshots
 
-![](./screanshots/1.jpg)
-![](./screanshots/2.jpg)
-![](./screanshots/3.jpg)
-![](./screanshots/4.jpg)
+![](./screenshots/1.jpg)
+![](./screenshots/2.jpg)
+![](./screenshots/3.jpg)
+![](./screenshots/4.jpg)
